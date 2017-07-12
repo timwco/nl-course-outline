@@ -11,7 +11,7 @@
 (function() {
     'use strict';
 
-  const dataURL = '';
+  const dataURL = 'https://rawgit.com/twhitacre/nl-course-outline/master/dataset.json';
   const lessons = document.querySelectorAll('.eo');
   const styles = 'text-align:center; border: 25px solid #43d6a0; margin: 0 -20px; background-color: #43d6a0; color: white;';
   const course = Number(document.URL.substr(document.URL.lastIndexOf("/") + 1));
