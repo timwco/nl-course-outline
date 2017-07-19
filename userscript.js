@@ -29,13 +29,14 @@
 
   function groupLessons (day) {
 
-    let i, dt, lessonId;
+    let i, dt, lessonId, isLesson;
 
     for (i = 0; i < lessons.length; i++ ) {
       dt = lessons[i].querySelector('dt');
       if (!dt.hasAttribute('style')) {
         lessonId = Number(dt.innerText.substr(-3));
-        if (lessonId === Number(day.start)){ // start
+        isLesson = (dt.innerText.indexOf('LESSON') !== -1)
+        if (lessonId === Number(day.start) && isLesson){ // start
           lessons[i].insertAdjacentHTML('beforebegin', `<div style="${styles}">${day.title}</div>`);
         }
       }
